@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import {Nav, NavItem, Navbar, NavbarToggler, NavbarBrand, Collapse} from 'reactstrap'
-import {NavLink} from 'react-router-dom'
+import {Nav, NavItem, Navbar, NavbarToggler, NavbarBrand, Collapse, Button} from 'reactstrap'
+import {NavLink, Redirect} from 'react-router-dom'
 
 class Head extends Component{
   state = {
@@ -53,6 +53,12 @@ class Head extends Component{
                 </NavLink>
               </NavItem> 
 
+            </Nav>
+            <Nav className='ml-auto'>
+              <NavItem>
+                <Button  color='dark'><NavLink to='/login' className='nav-link text-white p-0'>Login</NavLink></Button>
+                <Button  color='dark'><NavLink to='/' className='nav-link text-white p-0'>Sign Out</NavLink></Button>
+              </NavItem> 
             </Nav>
           </Collapse>        
         </div>
