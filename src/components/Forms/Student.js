@@ -33,12 +33,12 @@ class Student extends Component{
         <div className="form-row">
           <div className="form-group col-md-6">
             <label htmlFor="firstname">First Name</label>
-            <input type="text" className="form-control" id="firstname" name="firstname" onChange={this.changeHandler} />
+            <input type="text" className="form-control" id="firstname" name="firstname" onChange={this.changeHandler} required/>
           </div>
 
           <div className="form-group col-md-6">
             <label htmlFor="lastname">Last Name</label>
-            <input type="text" className="form-control" id="lastname" name="lastname" onChange={this.changeHandler}/>
+            <input type="text" className="form-control" id="lastname" name="lastname" onChange={this.changeHandler} required/>
           </div>
         </div>
 
@@ -47,7 +47,7 @@ class Student extends Component{
           <div className="input-group-prepend">
             <span className="input-group-text bg-primary text-white" id="contact">Contact No.</span>
           </div>
-          <input type="tel"  className="form-control" id="contact" name="contact" onChange={this.changeHandler}/>
+          <input type="tel"  className="form-control" id="contact" name="contact" onChange={this.changeHandler} required/>
         </div>
 
 
@@ -55,7 +55,7 @@ class Student extends Component{
           <div className="input-group-prepend">
             <span className="input-group-text bg-primary text-white " id="email">Email</span>
           </div>
-          <input type="email" className="form-control" id="email" name="email" onChange={this.changeHandler}/>
+          <input type="email" className="form-control" id="email" name="email" onChange={this.changeHandler} required/>
         </div>
 
         <div className="input-group mb-3">

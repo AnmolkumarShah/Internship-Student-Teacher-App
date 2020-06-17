@@ -12,6 +12,10 @@ import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import StudentsData from './Admin/Students'
 import TeachersData from './Admin/Teachers'
+import Footer from './layout/footer';
+import Courses from './Courses/Courses'
+import Contact from './Contact/Contact'
+import Questions from './Admin/Questions'
 
 class Main extends Component{
   render(){
@@ -25,10 +29,14 @@ class Main extends Component{
           <Route exact path='/teacher' component={Teacher} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/dashboard' component={Dashboard} />
+          <Route exact path='/contact' component={Contact} />
+          <Route exact path='/courses' component={Courses} />
+          <Route exact path='/questions' component={Questions} />
           <Route exact path='/students-date' component={StudentsData} />
           <Route exact path='/teachers-date' component={TeachersData} />
-          <Route path='/' component={Home} />
+          <Route  path='/' component={Home} />
         </Switch>
+        <Footer/>
       </>
     )
   }

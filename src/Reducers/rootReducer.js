@@ -3,11 +3,13 @@ import {firebaseReducer} from 'react-redux-firebase'
 import {firestoreReducer} from 'redux-firestore'
 import StudentReducer from './studentReducer'
 import TeacherReducer from './teacherReducer'
+import AuthReducer from './authReducer'
 
 const rootreducer = combineReducers({
-  firebase : firestoreReducer,
+  firebase : firebaseReducer,
   firestore : firestoreReducer,
   student : StudentReducer,
+  auth : AuthReducer,
   teacher : TeacherReducer,
 })
 

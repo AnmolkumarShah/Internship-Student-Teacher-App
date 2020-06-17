@@ -1,13 +1,13 @@
 import React from 'react';
 import { Table,Jumbotron,Container,Breadcrumb, BreadcrumbItem } from 'reactstrap';
-import Student from './Student';
+import Question from './Question';
 import {firestoreConnect} from 'react-redux-firebase'
 import {compose} from 'redux'
 import { connect } from 'react-redux';
 import {Link} from 'react-router-dom'
 import {Redirect} from 'react-router-dom';
 
-const Students = ({students,uid}) => {
+const Questions = ({questions,uid}) => {
     if(!uid) return <Redirect to='/home' />
   return (
     <>
@@ -15,7 +15,7 @@ const Students = ({students,uid}) => {
           <Container>
             <div className='row'>
               <div className='col-sm-6 text-white'>
-                <h1 className='display-4'>Students</h1>
+                <h1 className='display-4'>Asked Questions</h1>
                 <p className='lead shadow-lg'></p>
               </div>
               <div className='col-sm-6 my-auto text-center'>
@@ -25,23 +25,20 @@ const Students = ({students,uid}) => {
         </Jumbotron>
         <Breadcrumb className=''>
           <BreadcrumbItem><Link to='/dashboard'>Dashboard</Link></BreadcrumbItem>
-          <BreadcrumbItem active >Students Data</BreadcrumbItem>
+          <BreadcrumbItem active >Asked Question</BreadcrumbItem>
         </Breadcrumb>
       <div className='m-2'>
         <Table dark responsive bordered striped>
           <thead>
             <tr>
               <th>#</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Email</th>
-              <th>Reg Date</th>
-              <th>Courses</th>
-              <th>Contact</th>
+              <th>Subject</th>
+              <th>Description</th>
+              <th>Date</th>
             </tr>
           </thead>
           <tbody>
-            {students && students.map((item,index) => <Student index={index} student={item} key={item.id} /> )}
+            {questions && questions.map((item,index) => <Question index={index} question={item} key={item.id} /> )}
           </tbody>
         </Table>
       </div>
@@ -51,10 +48,10 @@ const Students = ({students,uid}) => {
 
 const mapStateToProps = (state) => {
   console.log(state);
-  const students = state.firestore.ordered.students;
+  const questions = state.firestore.ordered.questions;
   const uid = state.firebase.auth.uid;
   return{
-    students : students,
+    questions : questions,
     uid : uid,
   };
 }
@@ -64,8 +61,8 @@ export default compose(
   connect(mapStateToProps),
   firestoreConnect(ownProps => [
     {
-      collection : 'students',
+      collection : 'questions',
       orderBy : ['date', 'desc']
     }
   ])
-)(Students);
+)(Questions);

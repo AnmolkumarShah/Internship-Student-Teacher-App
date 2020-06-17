@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import {Nav, NavItem, Navbar, NavbarToggler, NavbarBrand, Collapse, Button} from 'reactstrap'
+import {Nav, NavItem, Navbar, NavbarToggler, NavbarBrand, Collapse, Button, ButtonGroup } from 'reactstrap'
 import {NavLink, Redirect} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {signOut} from '../../Actions/adminAction'
 
 class Head extends Component{
   state = {
@@ -23,23 +25,30 @@ class Head extends Component{
       <Navbar dark color="primary" expand='md'>
         <div className="container">
         <NavbarToggler onClick={this.toggleNav}/>
-          <NavbarBrand className='mr-auto' href="/">
-            Brand 
-          </NavbarBrand>
+          { (!this.props.uid)? <NavbarBrand className='mr-auto' href="/"> Brand </NavbarBrand> : null
+          }
           <Collapse isOpen = {this.state.isNavOpen} navbar>
             <Nav navbar className='ml-auto'>
 
               <NavItem>
-                <NavLink to='/home' className='nav-link'>
+                <NavLink to='/' className='nav-link'>
                   <span>Home</span>
                 </NavLink>
               </NavItem>
 
               <NavItem>
-                <NavLink to='/menu' className='nav-link'>
+                <NavLink to='/courses' className='nav-link'>
                   <span>Courses</span>
                 </NavLink>
               </NavItem>
+
+              
+
+              <NavItem>
+                <NavLink to='/contact' className='nav-link'>
+                  <span>Contact Us</span>
+                </NavLink>
+              </NavItem> 
 
               <NavItem>
                 <NavLink to='/about' className='nav-link'>
@@ -47,20 +56,13 @@ class Head extends Component{
                 </NavLink>
               </NavItem>
 
-              <NavItem>
-                <NavLink to='/contact-us' className='nav-link'>
-                  <span>Contact Us</span>
-                </NavLink>
-              </NavItem> 
-
             </Nav>
+            </Collapse>        
             <Nav className='ml-auto'>
               <NavItem>
-                <Button  color='dark'><NavLink to='/login' className='nav-link text-white p-0'>Login</NavLink></Button>
-                <Button  color='dark'><NavLink to='/' className='nav-link text-white p-0'>Sign Out</NavLink></Button>
+                {(!this.props.uid) ? <Button className='btn-sm' color='dark'><NavLink to='/login' className='nav-link text-white p-0'>Login</NavLink></Button> : <ButtonGroup ><Button className='btn-sm' onClick={this.props.signOut}  color='dark'><NavLink to='/' className='nav-link text-white p-0'>Sign Out</NavLink></Button><Button  color='dark' className='btn-sm'><NavLink to='/dashboard' className='nav-link text-white p-0'>Dashboard</NavLink></Button></ButtonGroup >}
               </NavItem> 
             </Nav>
-          </Collapse>        
         </div>
       </Navbar>
       </>
@@ -68,4 +70,18 @@ class Head extends Component{
   }
 }
 
-export default Head;
+const mapStateToProps = (state) => {
+  const uid = state.firebase.auth.uid;
+  return{
+    uid: uid,
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return{
+    signOut : () => dispatch(signOut())
+  }
+}
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Head);

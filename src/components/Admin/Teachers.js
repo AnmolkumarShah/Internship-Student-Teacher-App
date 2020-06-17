@@ -5,8 +5,11 @@ import {firestoreConnect} from 'react-redux-firebase'
 import {compose} from 'redux'
 import { connect } from 'react-redux';
 import {Link} from 'react-router-dom'
+import {Redirect} from 'react-router-dom';
 
-const Teachers = ({teachers}) => {
+
+const Teachers = ({uid,teachers}) => {
+  if(!uid) return <Redirect to='/home' />
   return (
     <>
       <Jumbotron fluid className='bg-dark'>
@@ -51,8 +54,10 @@ const Teachers = ({teachers}) => {
 const mapStateToProps = (state) => {
   console.log(state);
   const teachers = state.firestore.ordered.teachers;
+  const uid = state.firebase.auth.uid;
   return{
     teachers : teachers,
+    uid : uid,
   };
 }
 

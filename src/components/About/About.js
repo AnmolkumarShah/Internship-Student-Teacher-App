@@ -10,7 +10,7 @@ const About = () => {
             <div className="container">
                 <div className="featured">
                 <div className="row">
-                 <div className="col-md-9">
+                 <div className="col-md-9 mt-3">
                 <h1>
                   ABOUT
                 </h1>
@@ -18,9 +18,7 @@ const About = () => {
                    our learning will make your life easier
                 </p>
                 <p>
-                    <a className="btn btn-success btn-lg" href="#">
-                    Find out more
-                    </a>   
+          
                 </p>
             </div>
               </div>
@@ -44,17 +42,17 @@ Sometimes, it may happen that while you hire a private tutor for your word then 
       <div className="container">
         <div className="row">
           <div className="col-md-4" id="md1">
-                  <img src="image/1263.jpg" className="bodyimage" /> 
+                  
                   <h2>Price it</h2>
                   <p>Get in touch for an immediate no obligation quote!</p>
                </div>
                <div className="col-md-4">
-                  <img src="image/3394878.jpg" className="bodyimage" /> 
+                  
                   <h2>Plan it</h2>
                   <p>We will agree on a deadline and commit to it.</p>
                </div>
                <div className="col-md-4">
-                  <img src="image/3808949.jpg" className="bodyimage" /> 
+                  
                   <h2>Make it</h2>
                   <p>We will deliver your website on time with the best quality.</p>
             </div>
@@ -99,18 +97,6 @@ Sometimes, it may happen that while you hire a private tutor for your word then 
             </p>
 </div>
 <Carousel />
-</div>
-<div className="jumbotron-fluid" id="jumbo2">
-            <div className="container">
-                <div className="featured2">
-                <p>
-                  Registered address: New Broad Street House, 35 New Broad Street , London, EC2M 1NH
-                </p>
-                <p>
-                 Coveside Ltd. trading as Alchemi Group. Company registration number: 04574148 VAT reg no.: 101 4888 33
-                </p>
-            </div>
-              </div>
 </div>
 
   </>)

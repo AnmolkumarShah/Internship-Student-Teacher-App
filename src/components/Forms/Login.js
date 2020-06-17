@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import {signIn} from '../../Actions/adminAction'
+import {connect} from 'react-redux'
+import {Redirect} from 'react-router-dom';
 
 class Admin extends Component{
   state = {
@@ -17,9 +20,11 @@ class Admin extends Component{
 
   submitHandler = (event) => {
     event.preventDefault();
-    console.log(this.state)
+    this.props.signIn(this.state)
   }
   render(){
+    const uid = this.props.uid;
+    if(uid) return <Redirect to='/dashboard' />
     return(
       <div className='container h6 mt-5 mx-auto '>
       <form onSubmit={this.submitHandler} className="col-sm-6 mx-auto">
@@ -45,4 +50,18 @@ class Admin extends Component{
   }
 }
 
-export default Admin;
+const mapDispatchToProps = (dispatch) => {
+  return{
+    signIn : (credentials) => dispatch(signIn(credentials))
+  }
+}
+
+const mapStateToProps = (state) => {
+  const uid = state.firebase.auth.uid;
+  return{
+    uid : uid,
+  }
+}
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Admin);
