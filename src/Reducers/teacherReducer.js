@@ -1,12 +1,13 @@
+import {toast} from 'react-toastify'
+
 const teacherReducer = (state = {}, action) => {
   switch(action.type){
     case 'TEACHER_REGISTER' : {
-      console.log(action.credentials)
-      console.log("registered")
+      toast.success("Teacher Registration Successfully");  
       return state;
     }
     case 'TEACHER_REGISTER_ERROR' : {
-      console.log("error")
+      toast.error("Registration Error");  
       return state;
     }
     default:

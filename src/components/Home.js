@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import Head from './layout/Head'
 import Carousel from './layout/Carousel/Carousel'
-import { Card, Button, CardTitle, CardText, Col, Modal, ModalHeader, ModalBody,Jumbotron, Container  } from 'reactstrap';
+import { Card, Button, CardTitle, CardText, Col, Modal, ModalHeader, ModalBody,Jumbotron, Container,Badge, Row   } from 'reactstrap';
 import StudentForm from './Forms/Student'
 import TeacherForm from './Forms/Teacher'
 import Cards from './layout/Cards';
 import {NavLink} from 'react-router-dom'
+import FAQ from '../components/layout/Collapse'
+import './layout/Head.css'
 
 class TeacherModal extends Component{
   state = {
@@ -21,7 +22,7 @@ class TeacherModal extends Component{
     return(
       <>
         <Col>
-          <Card body>
+          <Card body className='mt-3'>
             <CardTitle>I Want to be an Instructor</CardTitle>
             <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
             <Button onClick={this.toggleTeacherModal} color='primary'>Go somewhere</Button>
@@ -37,7 +38,7 @@ class TeacherModal extends Component{
       </>
     )
   }
-}
+};
 
 class StudentModal extends Component{
   state = {
@@ -54,7 +55,7 @@ class StudentModal extends Component{
     return (
       <>
         <Col>
-          <Card body>
+          <Card body className='mt-3'>
             <CardTitle>I'm A Student</CardTitle>
             <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
             <Button onClick={this.toggleStudentModal} color='primary'>Go somewhere</Button>
@@ -72,6 +73,96 @@ class StudentModal extends Component{
   }
 }
 
+const Head = (props) => {
+  const style = {
+    "font-family": "'Piedra', cursive",
+  }
+
+  return (
+    <>
+
+    <div className="jumbotron jumbotron-fluid">
+      <div className="container">  
+        <div className="main">
+          <div style={{"color": "white", "mix-blend-mode": "difference"}}  className='display-2'>Brand Name</div>
+          <div style={{"color": "white", "mix-blend-mode": "difference"}}  className='h1 lead'>In our platform you will get the latest news of our services as well as the news of the examination that your student will give. We also provide news on various school level competitive exams in our</div>
+        </div>
+      </div>
+    </div>
+
+    <div className="supporting">
+      <div className="container">
+        <div className = 'container h2 text-center  mb-3' style={style}>MOST EXPERIENCED AND QUALIFIED PRIVATE HOME TUTOR AT YOUR FINGERTIP WITH BRAND
+        </div>
+        <div>
+          <StudentModal />
+        </div>
+        <div>
+          <TeacherModal />
+        </div>
+        <div className="col">
+          <Card body className='mt-3'>
+            <CardTitle>I'm A Student</CardTitle>
+            <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+            <Button color='primary'><NavLink to='/courses' className='nav-link p-2 text-white'>Explore Courses</NavLink></Button>
+          </Card>
+        </div>
+      </div>
+      <div className="clearfix"></div>
+    </div>
+    </>
+  );
+};
+
+const JumboOne = () => {
+  const teacherStyle = {
+    'background-image' : "url('https://images.pexels.com/photos/4173332/pexels-photo-4173332.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')",
+  'background-size' : 'cover',
+  'opacity' : '1'
+  }
+  return (
+    <div>
+      <Jumbotron fluid style={teacherStyle}>
+        <Container>
+          <div className='row'>
+            <div className='col-sm-6 text-left' >
+              <h1 style={{"color": "white", "mix-blend-mode": "difference"}} className='text-white'>TUITION BY OUR MOST QUALIFIED HOME TUTOR</h1>
+              <div style={{"color": "white", "mix-blend-mode": "difference"}} className=' h4 lead font-weight-bold'>Gurusiksha bridges the gap between the great mentors and students need. provides online as well as offline assistance to the students so they can solving their queries and doubts. strongly believe in providing the best online as well as offline tuitions to the students.</div>
+              <Button className="btn-primary mt-4">Learn More</Button>
+            </div>
+          </div>
+        </Container>
+      </Jumbotron>
+    </div>
+  );
+}
+
+const JumboTwo = () => {
+  const stydentStyle = {
+    'background-image' : "url('https://images.pexels.com/photos/267491/pexels-photo-267491.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')",
+  'background-size' : 'cover',
+  'opacity' : '0.9'
+  }
+  return (
+    <div>
+      <Jumbotron fluid style={stydentStyle}>
+        <Container>
+          <div className='row'>
+            <div className='col-sm-6'></div>
+            <div className='col-sm-6 text-right' >
+              <h1 style={{"color": "white", "mix-blend-mode": "difference"}} className='text-white'>BEST ONLINE TUITION CLASSES BY OUR VERTEX TUTORS</h1>
+              <div style={{"color": "white", "mix-blend-mode": "difference"}} className=' h4 lead font-weight-bold'>Within the proximity of your home get the assistance of the best online as well as offline teachers to nourish the preparation of your child. Online live sessions are provided here to clarify the concepts and to provide education in the most interactive manner.</div>
+              <Button className="btn-primary mt-4">Learn More</Button>
+            </div>
+          </div>
+        </Container>
+      </Jumbotron>
+    </div>
+  );
+}
+
+
+
 class Home extends Component{
   render(){
     const style = {
@@ -81,64 +172,18 @@ class Home extends Component{
       "font-family": "'Marck Script', cursive",
       'font-size' : '30px',
     }
-    const stydentStyle = {
-      'background-image' : "url('https://images.pexels.com/photos/267491/pexels-photo-267491.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')",
-    'background-size' : 'cover',
-    'opacity' : '0.9'
-    }
-    const teacherStyle = {
-      'background-image' : "url('https://images.pexels.com/photos/4173332/pexels-photo-4173332.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')",
-    'background-size' : 'cover',
-    'opacity' : '0.9'
-    }
+    
+    
+
     return(
+      
       <>
         <Head />
-        <div className = 'h2 text-center mx-4 mb-3' style={style}>MOST EXPERIENCED AND QUALIFIED PRIVATE HOME TUTOR AT YOUR FINGERTIP WITH BRAND
-        </div>
-        <Cards/>
-        <Jumbotron fluid className='bg-dark' style={stydentStyle}>
-            <Container fluid>
-              <div className='row'>
-                <div className='col-sm-6 text-white'>
-                  <h1 className='display-4 text-warning'>Join As Student</h1>
-                </div>
-                <div className='col-sm-6 mx-auto my-auto text-center'>
-                  <StudentModal />
-                </div>
-              </div>
-            </Container>
-          </Jumbotron>
-        
-        <blockquote className="blockquote text-center m-5" >
-          <p style={style2} classNane="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-          <footer className="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-        </blockquote>
-        <Jumbotron fluid className='bg-dark' style={teacherStyle}>
-            <Container fluid>
-              <div className='row'>
-                <div className='col-sm-6 mx-auto my-auto text-center'>
-                  <TeacherModal />
-                </div>
-                <div className='col-sm-6 text-white'>
-                  <h1 className='display-4 text-primary'>Join As Teacher</h1>
-                </div>
-              </div>
-            </Container>
-          </Jumbotron>
-        <Cards/> 
-        <Jumbotron fluid className='bg-dark' style={teacherStyle}>
-            <Container fluid>
-              <div className='row'>
-                <div className='col-sm-6 text-white'>
-                  <h1 className='display-4 text-dark'>Ask A Question</h1>
-                </div>
-                <div className='col-sm-6 mx-auto my-auto text-center'>
-                  <Button className='btn-warning btn-lg text-white'><NavLink to='/contact'>Ask</NavLink></Button>
-                </div>
-              </div>
-            </Container>
-          </Jumbotron>      
+        <JumboOne/>
+        <JumboTwo/>
+        <div className='display-4 text-center'>FAQ's</div>
+        <p className="text-center">Click for more information</p>
+        <FAQ />   
         <Carousel />
       </>
     )

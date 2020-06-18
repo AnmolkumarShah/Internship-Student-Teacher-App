@@ -3,7 +3,7 @@ import {toast} from 'react-toastify'
 const studentReducer = (state = {}, action) => {
   switch(action.type){
     case 'STUDENT_REGISTER' : {    
-      toast.success("You Register Successfully");  
+      toast.success("Student Registration Successfully");  
       return state;
     }
     case 'ADD_SUCCESS' : {    
