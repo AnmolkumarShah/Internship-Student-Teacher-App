@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Internship-Student-Teacher-App/static/css/main.6612b19f.chunk.css",
-    "main.js": "/Internship-Student-Teacher-App/static/js/main.2a026765.chunk.js",
-    "main.js.map": "/Internship-Student-Teacher-App/static/js/main.2a026765.chunk.js.map",
+    "main.css": "/Internship-Student-Teacher-App/static/css/main.89444459.chunk.css",
+    "main.js": "/Internship-Student-Teacher-App/static/js/main.3571c05f.chunk.js",
+    "main.js.map": "/Internship-Student-Teacher-App/static/js/main.3571c05f.chunk.js.map",
     "runtime-main.js": "/Internship-Student-Teacher-App/static/js/runtime-main.a862e5c8.js",
     "runtime-main.js.map": "/Internship-Student-Teacher-App/static/js/runtime-main.a862e5c8.js.map",
     "static/css/2.e45b478a.chunk.css": "/Internship-Student-Teacher-App/static/css/2.e45b478a.chunk.css",
     "static/js/2.8d09a126.chunk.js": "/Internship-Student-Teacher-App/static/js/2.8d09a126.chunk.js",
     "static/js/2.8d09a126.chunk.js.map": "/Internship-Student-Teacher-App/static/js/2.8d09a126.chunk.js.map",
     "index.html": "/Internship-Student-Teacher-App/index.html",
-    "precache-manifest.209c04a583319ebcb95eaeee615ed6f2.js": "/Internship-Student-Teacher-App/precache-manifest.209c04a583319ebcb95eaeee615ed6f2.js",
+    "precache-manifest.be7c7b2342b399df58cc553152e037dc.js": "/Internship-Student-Teacher-App/precache-manifest.be7c7b2342b399df58cc553152e037dc.js",
     "service-worker.js": "/Internship-Student-Teacher-App/service-worker.js",
     "static/css/2.e45b478a.chunk.css.map": "/Internship-Student-Teacher-App/static/css/2.e45b478a.chunk.css.map",
-    "static/css/main.6612b19f.chunk.css.map": "/Internship-Student-Teacher-App/static/css/main.6612b19f.chunk.css.map",
+    "static/css/main.89444459.chunk.css.map": "/Internship-Student-Teacher-App/static/css/main.89444459.chunk.css.map",
     "static/js/2.8d09a126.chunk.js.LICENSE.txt": "/Internship-Student-Teacher-App/static/js/2.8d09a126.chunk.js.LICENSE.txt",
     "static/media/font-awesome.css": "/Internship-Student-Teacher-App/static/media/fontawesome-webfont.fee66e71.woff"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.a862e5c8.js",
     "static/css/2.e45b478a.chunk.css",
     "static/js/2.8d09a126.chunk.js",
-    "static/css/main.6612b19f.chunk.css",
-    "static/js/main.2a026765.chunk.js"
+    "static/css/main.89444459.chunk.css",
+    "static/js/main.3571c05f.chunk.js"
   ]
 }

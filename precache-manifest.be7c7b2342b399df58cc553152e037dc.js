@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6acb0f87c874785d64fc83c821fc322f",
+    "revision": "c987909454d27f73c0bc723e78d9cc79",
     "url": "/Internship-Student-Teacher-App/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Internship-Student-Teacher-App/static/css/2.e45b478a.chunk.css"
   },
   {
-    "revision": "5dd6e37a8d6d97912e36",
-    "url": "/Internship-Student-Teacher-App/static/css/main.6612b19f.chunk.css"
+    "revision": "6dd5cce7a95b6048d5f0",
+    "url": "/Internship-Student-Teacher-App/static/css/main.89444459.chunk.css"
   },
   {
     "revision": "1c7f886eee8e4603fa5c",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Internship-Student-Teacher-App/static/js/2.8d09a126.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5dd6e37a8d6d97912e36",
-    "url": "/Internship-Student-Teacher-App/static/js/main.2a026765.chunk.js"
+    "revision": "6dd5cce7a95b6048d5f0",
+    "url": "/Internship-Student-Teacher-App/static/js/main.3571c05f.chunk.js"
   },
   {
     "revision": "2d983e1736eb94e9621e",
