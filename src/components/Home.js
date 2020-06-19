@@ -75,24 +75,24 @@ class StudentModal extends Component{
 
 const Head = (props) => {
   const style = {
-    "font-family": "'Piedra', cursive",
+    "font-family": "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
   }
 
   return (
     <>
 
-    <div className="jumbotron jumbotron-fluid">
+    <div className="jumbotron jumbotron-fluid" style={{"margin-top" : '50px'}}>
       <div className="container">  
-        <div className="main">
-          <div style={{"color": "white", "mix-blend-mode": "difference"}}  className='display-2'>Brand Name</div>
-          <div style={{"color": "white", "mix-blend-mode": "difference"}}  className='h1 lead'>In our platform you will get the latest news of our services as well as the news of the examination that your student will give. We also provide news on various school level competitive exams in our</div>
+        <div className="main mx-2 p-2 text-center">
+          <div className='display-2'>Brand Name</div>
+          <div  className='h1 lead'>In our platform you will get the latest news of our services as well as the news of the examination that your student will give. We also provide news on various school level competitive exams in our</div>
         </div>
       </div>
     </div>
 
     <div className="supporting">
       <div className="container">
-        <div className = 'container h2 text-center  mb-3' style={style}>MOST EXPERIENCED AND QUALIFIED PRIVATE HOME TUTOR AT YOUR FINGERTIP WITH BRAND
+        <div className = 'container h2 text-center  mb-3 font-weight-bold' style={style}>MOST EXPERIENCED AND QUALIFIED PRIVATE HOME TUTOR AT YOUR FINGERTIP WITH BRAND
         </div>
         <div>
           <StudentModal />
@@ -127,7 +127,7 @@ const JumboOne = () => {
           <div className='row'>
             <div className='col-sm-6 text-left' >
               <h1 style={{"color": "white", "mix-blend-mode": "difference"}} className='text-white'>TUITION BY OUR MOST QUALIFIED HOME TUTOR</h1>
-              <div style={{"color": "white", "mix-blend-mode": "difference"}} className=' h4 lead font-weight-bold'>Gurusiksha bridges the gap between the great mentors and students need. provides online as well as offline assistance to the students so they can solving their queries and doubts. strongly believe in providing the best online as well as offline tuitions to the students.</div>
+              <div style={{"color": "white", "mix-blend-mode": "difference"}} className=' h4 lead font-weight-bold d-sm-none d-md-block'>Gurusiksha bridges the gap between the great mentors and students need. provides online as well as offline assistance to the students so they can solving their queries and doubts. strongly believe in providing the best online as well as offline tuitions to the students.</div>
               <Button className="btn-primary mt-4">Learn More</Button>
             </div>
           </div>

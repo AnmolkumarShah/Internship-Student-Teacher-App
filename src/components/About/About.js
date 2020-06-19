@@ -6,7 +6,7 @@ import './About.css'
 const About = () => {
   return(
     <>
-    <div className="jumbotron-fluid" id="jumbo1">
+    <div className="jumbotron-fluid" id="jumbo1" style={{"margin-top" : '50px'}}>
             <div className="container">
                 <div className="featured">
                 <div className="row">

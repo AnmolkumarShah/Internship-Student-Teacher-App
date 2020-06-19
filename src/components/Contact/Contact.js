@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Badge } from 'reactstrap';
 import {connect} from 'react-redux'
 import {addCourse} from '../../Actions/adminAction'
 import {AddQue} from '../../Actions/studentAction'
+import Head from '../Contact/Head';
 
 class Contact extends Component {
   state = {
@@ -26,6 +26,8 @@ class Contact extends Component {
 
   render(){
     return(
+      <>
+      <Head />
       <div className='container'>
         <div className='row'>
           <div className='col-sm-6'>
@@ -63,6 +65,7 @@ class Contact extends Component {
           </form>
         </div>
       </div>
+      </>
     )
   }
 }

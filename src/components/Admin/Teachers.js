@@ -12,7 +12,7 @@ const Teachers = ({uid,teachers}) => {
   if(!uid) return <Redirect to='/home' />
   return (
     <>
-      <Jumbotron fluid className='bg-dark'>
+      <Jumbotron fluid className='bg-dark' style={{"margin-top" : '50px'}}>
         <Container>
           <div className='row'>
             <div className='col-sm-6 text-white'>

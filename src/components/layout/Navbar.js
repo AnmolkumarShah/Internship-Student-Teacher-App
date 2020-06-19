@@ -22,7 +22,7 @@ class Head extends Component{
   render(){
     return(
       <>
-      <Navbar dark color="primary" expand='md'>
+      <Navbar dark color="primary" expand='md' className='fixed-top shadow-lg'>
         <div className="container">
         <NavbarToggler onClick={this.toggleNav}/>
           { (!this.props.uid)? <NavbarBrand className='mr-auto' href="/"> Brand </NavbarBrand> : null
@@ -60,7 +60,7 @@ class Head extends Component{
             </Collapse>        
             <Nav className='ml-auto'>
               <NavItem>
-                {(!this.props.uid) ? null : <ButtonGroup ><Button className='btn-sm' onClick={this.props.signOut}  color='dark'><NavLink to='/' className='nav-link text-white p-0'>Sign Out</NavLink></Button><Button  color='dark' className='btn-sm'><NavLink to='/dashboard' className='nav-link text-white p-0'>Dashboard</NavLink></Button></ButtonGroup >}
+                {(!this.props.uid) ? <Button className='btn-sm' color='dark'><NavLink to='/login' className='nav-link text-white p-0'>Login</NavLink></Button> : <ButtonGroup ><Button className='btn-sm' onClick={this.props.signOut}  color='dark'><NavLink to='/' className='nav-link text-white p-0'>Sign Out</NavLink></Button><Button  color='dark' className='btn-sm'><NavLink to='/dashboard' className='nav-link text-white p-0'>Dashboard</NavLink></Button></ButtonGroup >}
               </NavItem> 
             </Nav>
         </div>
