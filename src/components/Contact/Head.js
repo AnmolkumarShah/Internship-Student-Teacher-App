@@ -6,7 +6,6 @@ const Head = (props) => {
     'background-image' : "url('https://images.pexels.com/photos/207456/pexels-photo-207456.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')",
     'background-size' : 'cover',
     'opacity' : '0.9',
-    "margin-top" : '50px'
   }
   return (
     <div>

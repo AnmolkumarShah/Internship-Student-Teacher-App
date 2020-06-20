@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import {Route, Switch} from 'react-router-dom'
-import Navbar from './layout/Navbar'
 
 import Home from './Home'
-import About from './About/About'
+import About from './About/AboutUs'
 import Student from './Forms/Student'
 import Teacher from './Forms/Teacher'
 import Login from './Forms/Login'
@@ -16,12 +15,13 @@ import Footer from './layout/footer';
 import Courses from './Courses/Courses'
 import Contact from './Contact/Contact'
 import Questions from './Admin/Questions'
-
+import SideNav from './layout/SideNavbar'
 class Main extends Component{
   render(){
     return(
       <>
-        <Navbar />
+        <SideNav />
+        
         <ToastContainer />
         <Switch>
           <Route exact path='/about' component={About} />

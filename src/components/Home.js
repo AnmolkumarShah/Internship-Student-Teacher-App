@@ -6,6 +6,7 @@ import TeacherForm from './Forms/Teacher'
 import Cards from './layout/Cards';
 import {NavLink} from 'react-router-dom'
 import FAQ from '../components/layout/Collapse'
+import Courses from './layout/Courses/Courses'
 import './layout/Head.css'
 
 class TeacherModal extends Component{
@@ -21,13 +22,13 @@ class TeacherModal extends Component{
   render(){
     return(
       <>
-        <Col>
+        <div className='col-sm-6'>
           <Card body className='mt-3'>
             <CardTitle>I Want to be an Instructor</CardTitle>
             <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
             <Button onClick={this.toggleTeacherModal} color='primary'>Go somewhere</Button>
           </Card>
-        </Col>
+        </div>
 
         <Modal isOpen={this.state.isTeacherModal} toggle={this.toggleTeacherModal}>
           <ModalHeader toggle={this.toggleTeacherModal}>Register Yourself</ModalHeader>
@@ -54,13 +55,13 @@ class StudentModal extends Component{
   render(){
     return (
       <>
-        <Col>
+        <div className='col-sm-6'>
           <Card body className='mt-3'>
             <CardTitle>I'm A Student</CardTitle>
             <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
             <Button onClick={this.toggleStudentModal} color='primary'>Go somewhere</Button>
           </Card>
-        </Col>
+        </div>
 
         <Modal isOpen={this.state.isStudentModal} toggle={this.toggleStudentModal}>
           <ModalHeader toggle={this.toggleStudentModal} >Register Yourself</ModalHeader>
@@ -81,7 +82,7 @@ const Head = (props) => {
   return (
     <>
 
-    <div className="jumbotron jumbotron-fluid" style={{"margin-top" : '50px'}}>
+    <div className="jumbotron jumbotron-fluid" style={{}}>
       <div className="container">  
         <div className="main mx-2 p-2 text-center">
           <div className='display-2'>Brand Name</div>
@@ -94,19 +95,13 @@ const Head = (props) => {
       <div className="container">
         <div className = 'container h2 text-center  mb-3 font-weight-bold' style={style}>MOST EXPERIENCED AND QUALIFIED PRIVATE HOME TUTOR AT YOUR FINGERTIP WITH BRAND
         </div>
-        <div>
-          <StudentModal />
-        </div>
-        <div>
-          <TeacherModal />
-        </div>
-        <div className="col">
-          <Card body className='mt-3'>
-            <CardTitle>I'm A Student</CardTitle>
-            <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-            <Button color='primary'><NavLink to='/courses' className='nav-link p-2 text-white'>Explore Courses</NavLink></Button>
-          </Card>
-        </div>
+        <Row>
+            <StudentModal />  
+
+            <TeacherModal /> 
+
+            
+        </Row>
       </div>
       <div className="clearfix"></div>
     </div>
@@ -118,7 +113,8 @@ const JumboOne = () => {
   const teacherStyle = {
     'background-image' : "url('https://images.pexels.com/photos/4173332/pexels-photo-4173332.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')",
   'background-size' : 'cover',
-  'opacity' : '1'
+  'opacity' : '1',
+  'padding' : '5px',
   }
   return (
     <div>
@@ -141,7 +137,8 @@ const JumboTwo = () => {
   const stydentStyle = {
     'background-image' : "url('https://images.pexels.com/photos/267491/pexels-photo-267491.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')",
   'background-size' : 'cover',
-  'opacity' : '0.9'
+  'opacity' : '0.9',
+  'padding' : '5px',
   }
   return (
     <div>
@@ -181,6 +178,7 @@ class Home extends Component{
         <Head />
         <JumboOne/>
         <JumboTwo/>
+        <Courses />
         <div className='display-4 text-center'>FAQ's</div>
         <p className="text-center">Click for more information</p>
         <FAQ />   

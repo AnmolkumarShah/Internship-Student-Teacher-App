@@ -11,7 +11,7 @@ const Questions = ({questions,uid}) => {
     if(!uid) return <Redirect to='/home' />
   return (
     <>
-      <Jumbotron fluid className='bg-dark' style={{"margin-top" : '50px'}}>
+      <Jumbotron fluid className='bg-dark' >
           <Container>
             <div className='row'>
               <div className='col-sm-6 text-white'>

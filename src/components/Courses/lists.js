@@ -8,14 +8,12 @@ import { connect } from 'react-redux';
 
 
 const list = ({courses}) => {
-  console.log(courses)
   return (
     <>
     <div className='h3 text-center'>Our Courses</div>
     <div className='h6 text-center'>Click on Course for more details</div>
     <ListGroup className='container'>
-    {(courses !== undefined) && courses.map((item,index) => <Course index={index} course={item} key={item.id} /> )}
-      <Course />
+    {(courses) && courses.map((item,index) => <Course index={index} course={item} key={item.id} /> )}
     </ListGroup>
     </>
   );
