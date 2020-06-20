@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import 'materialize-css/dist/css/materialize.min.css';
-import {Nav, NavItem, Navbar, NavbarToggler, NavbarBrand, Collapse, Button, ButtonGroup } from 'reactstrap'
-import {NavLink, Redirect} from 'react-router-dom'
+import {NavItem, Button, ButtonGroup } from 'reactstrap'
+import {NavLink} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {signOut} from '../../Actions/adminAction'
 
 class Sidenav extends Component{
+      
   render(){
     return (
       <div>

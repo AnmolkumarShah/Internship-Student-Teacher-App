@@ -4,11 +4,11 @@ import { Card, Button, CardHeader, CardFooter, CardBody,
 
 const item = (props) => {
   return(
-    <Card className='z-depth-3' style={{"margin" : "0 20px"}}>
-      <CardHeader className='truncate blue-grey darken-1'>{props.course ? <p>{props.course.name}</p> : null}</CardHeader>
+    <Card className='z-depth-1 bg-success mb-4' style={{"margin" : "0 20px"}}>
+      <CardHeader className='display-3 blue darken-3 z-depth-2 text-white'>{props.course ? <p>{props.course.name}</p> : null}</CardHeader>
       <CardBody>
-        <h1><CardTitle >{props.course ? <p>{props.course.name}</p> : null}</CardTitle></h1>
-        <CardText>{props.course ? <p>{props.course.description}</p> : null}</CardText>
+        <CardTitle className='display-4 text-white' >{props.course ? <p>{props.course.name}</p> : null}</CardTitle>
+        <CardTitle className='text-white display-3'>{props.course ? <p>{props.course.description}</p> : null}</CardTitle>
       </CardBody>
     </Card>
   )

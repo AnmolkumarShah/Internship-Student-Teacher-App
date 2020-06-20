@@ -23,8 +23,8 @@ class CenterMode  extends Component {
     };
     const courses = this.props.courses;
     return ( 
-      <div className='container' style={{"marginBottom": "20px"}}>
-        <h2 className='text-center'>Courses</h2>
+      <div className='container'>
+        <h2 className='text-center text-muted'>Courses</h2>
         <p className='text-center color-fade'>Swipe right for more</p>
         <Slider {...settings}>
           {(courses !== undefined) && courses.map((item,index) => <Item index={index} course={item} key={item.id} /> )}

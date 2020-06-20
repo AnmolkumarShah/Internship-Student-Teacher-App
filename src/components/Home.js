@@ -1,78 +1,19 @@
 import React, { Component } from 'react'
 import Carousel from './layout/Carousel/Carousel'
 import { Card, Button, CardTitle, CardText, Col, Modal, ModalHeader, ModalBody,Jumbotron, Container,Badge, Row   } from 'reactstrap';
-import StudentForm from './Forms/Student'
-import TeacherForm from './Forms/Teacher'
+import TeacherModal from './layout/TeacherModal'
+import StudentModal from './layout/StudentModal'
+
 import Cards from './layout/Cards';
 import {NavLink} from 'react-router-dom'
 import FAQ from '../components/layout/Collapse'
 import Courses from './layout/Courses/Courses'
 import './layout/Head.css'
+import TestimonialTest from './layout/testimonial';
+import Info from './layout/Info'
 
-class TeacherModal extends Component{
-  state = {
-    isTeacherModal : false,
-  }
 
-  toggleTeacherModal = () => {
-    this.setState({
-      isTeacherModal : !this.state.isTeacherModal,
-    })
-  }
-  render(){
-    return(
-      <>
-        <div className='col-sm-6'>
-          <Card body className='mt-3'>
-            <CardTitle>I Want to be an Instructor</CardTitle>
-            <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-            <Button onClick={this.toggleTeacherModal} color='primary'>Go somewhere</Button>
-          </Card>
-        </div>
 
-        <Modal isOpen={this.state.isTeacherModal} toggle={this.toggleTeacherModal}>
-          <ModalHeader toggle={this.toggleTeacherModal}>Register Yourself</ModalHeader>
-          <ModalBody>
-            <TeacherForm toggleTeacherModal={this.toggleTeacherModal}/>
-          </ModalBody>
-        </Modal>
-      </>
-    )
-  }
-};
-
-class StudentModal extends Component{
-  state = {
-    isStudentModal : false,
-  }
-
-  toggleStudentModal = () => {
-    this.setState({
-      isStudentModal : !this.state.isStudentModal,
-    })
-  }
-
-  render(){
-    return (
-      <>
-        <div className='col-sm-6'>
-          <Card body className='mt-3'>
-            <CardTitle>I'm A Student</CardTitle>
-            <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-            <Button onClick={this.toggleStudentModal} color='primary'>Go somewhere</Button>
-          </Card>
-        </div>
-
-        <Modal isOpen={this.state.isStudentModal} toggle={this.toggleStudentModal}>
-          <ModalHeader toggle={this.toggleStudentModal} >Register Yourself</ModalHeader>
-          <ModalBody>
-            <StudentForm toggleStudentModal={this.toggleStudentModal}/>
-          </ModalBody>          
-        </Modal>
-      </>
-    );
-  }
-}
 
 const Head = (props) => {
   const style = {
@@ -82,7 +23,7 @@ const Head = (props) => {
   return (
     <>
 
-    <div className="jumbotron jumbotron-fluid" style={{}}>
+    <div className="jumbotron jumbotron-fluid z-depth-4" style={{}}>
       <div className="container">  
         <div className="main mx-2 p-2 text-center">
           <div className='display-2'>Brand Name</div>
@@ -93,17 +34,14 @@ const Head = (props) => {
 
     <div className="supporting">
       <div className="container">
-        <div className = 'container h2 text-center  mb-3 font-weight-bold' style={style}>MOST EXPERIENCED AND QUALIFIED PRIVATE HOME TUTOR AT YOUR FINGERTIP WITH BRAND
+        <div className = 'container h2 text-center  mb-3 font-weight-bold' style={style}>
+        FIND BEST HOME TUTORS NEAR YOU.
         </div>
         <Row>
-            <StudentModal />  
-
-            <TeacherModal /> 
-
-            
+            <StudentModal /> 
+            <TeacherModal />             
         </Row>
       </div>
-      <div className="clearfix"></div>
     </div>
     </>
   );
@@ -118,7 +56,7 @@ const JumboOne = () => {
   }
   return (
     <div>
-      <Jumbotron fluid style={teacherStyle}>
+      <Jumbotron fluid style={teacherStyle} className="z-depth-4">
         <Container>
           <div className='row'>
             <div className='col-sm-6 text-left' >
@@ -142,7 +80,7 @@ const JumboTwo = () => {
   }
   return (
     <div>
-      <Jumbotron fluid style={stydentStyle}>
+      <Jumbotron fluid style={stydentStyle} className="z-depth-4">
         <Container>
           <div className='row'>
             <div className='col-sm-6'></div>
@@ -176,10 +114,12 @@ class Home extends Component{
       
       <>
         <Head />
+        <TestimonialTest/>
         <JumboOne/>
         <JumboTwo/>
+        <Info />
         <Courses />
-        <div className='display-4 text-center'>FAQ's</div>
+        <div className='display-4 text-center mt-3 text-muted'>FAQ's</div>
         <p className="text-center">Click for more information</p>
         <FAQ />   
         <Carousel />
