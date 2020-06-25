@@ -1,29 +1,31 @@
 {
   "files": {
-    "main.css": "/Internship-Student-Teacher-App/static/css/main.cf9ceece.chunk.css",
-    "main.js": "/Internship-Student-Teacher-App/static/js/main.5e04a506.chunk.js",
-    "main.js.map": "/Internship-Student-Teacher-App/static/js/main.5e04a506.chunk.js.map",
+    "main.css": "/Internship-Student-Teacher-App/static/css/main.6c509196.chunk.css",
+    "main.js": "/Internship-Student-Teacher-App/static/js/main.e62c4ce3.chunk.js",
+    "main.js.map": "/Internship-Student-Teacher-App/static/js/main.e62c4ce3.chunk.js.map",
     "runtime-main.js": "/Internship-Student-Teacher-App/static/js/runtime-main.a862e5c8.js",
     "runtime-main.js.map": "/Internship-Student-Teacher-App/static/js/runtime-main.a862e5c8.js.map",
-    "static/css/2.847401ab.chunk.css": "/Internship-Student-Teacher-App/static/css/2.847401ab.chunk.css",
-    "static/js/2.fe2cd378.chunk.js": "/Internship-Student-Teacher-App/static/js/2.fe2cd378.chunk.js",
-    "static/js/2.fe2cd378.chunk.js.map": "/Internship-Student-Teacher-App/static/js/2.fe2cd378.chunk.js.map",
+    "static/css/2.a0b592da.chunk.css": "/Internship-Student-Teacher-App/static/css/2.a0b592da.chunk.css",
+    "static/js/2.0517ec09.chunk.js": "/Internship-Student-Teacher-App/static/js/2.0517ec09.chunk.js",
+    "static/js/2.0517ec09.chunk.js.map": "/Internship-Student-Teacher-App/static/js/2.0517ec09.chunk.js.map",
     "index.html": "/Internship-Student-Teacher-App/index.html",
-    "precache-manifest.e122b05bd98563c06d7b26d425011ea9.js": "/Internship-Student-Teacher-App/precache-manifest.e122b05bd98563c06d7b26d425011ea9.js",
+    "precache-manifest.c65711d00109cd5d1ed2665312911cdf.js": "/Internship-Student-Teacher-App/precache-manifest.c65711d00109cd5d1ed2665312911cdf.js",
     "service-worker.js": "/Internship-Student-Teacher-App/service-worker.js",
-    "static/css/2.847401ab.chunk.css.map": "/Internship-Student-Teacher-App/static/css/2.847401ab.chunk.css.map",
-    "static/css/main.cf9ceece.chunk.css.map": "/Internship-Student-Teacher-App/static/css/main.cf9ceece.chunk.css.map",
-    "static/js/2.fe2cd378.chunk.js.LICENSE.txt": "/Internship-Student-Teacher-App/static/js/2.fe2cd378.chunk.js.LICENSE.txt",
+    "static/css/2.a0b592da.chunk.css.map": "/Internship-Student-Teacher-App/static/css/2.a0b592da.chunk.css.map",
+    "static/css/main.6c509196.chunk.css.map": "/Internship-Student-Teacher-App/static/css/main.6c509196.chunk.css.map",
+    "static/js/2.0517ec09.chunk.js.LICENSE.txt": "/Internship-Student-Teacher-App/static/js/2.0517ec09.chunk.js.LICENSE.txt",
     "static/media/mdb.css": "/Internship-Student-Teacher-App/static/media/arrow_right.8ef6a08c.svg",
     "static/media/all.min.css": "/Internship-Student-Teacher-App/static/media/fa-solid-900.f3a7d3b5.woff",
     "static/media/font-awesome.css": "/Internship-Student-Teacher-App/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/img1.jpg": "/Internship-Student-Teacher-App/static/media/img1.eb9d37a9.jpg",
+    "static/media/img2.jpg": "/Internship-Student-Teacher-App/static/media/img2.37487241.jpg",
     "static/media/slick-theme.css": "/Internship-Student-Teacher-App/static/media/slick.f97e3bbf.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a862e5c8.js",
-    "static/css/2.847401ab.chunk.css",
-    "static/js/2.fe2cd378.chunk.js",
-    "static/css/main.cf9ceece.chunk.css",
-    "static/js/main.5e04a506.chunk.js"
+    "static/css/2.a0b592da.chunk.css",
+    "static/js/2.0517ec09.chunk.js",
+    "static/css/main.6c509196.chunk.css",
+    "static/js/main.e62c4ce3.chunk.js"
   ]
 }
