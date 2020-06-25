@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import {addCourse} from '../../Actions/adminAction'
 import {AddQue} from '../../Actions/studentAction'
 import Head from '../Contact/Head';
 
@@ -46,22 +45,22 @@ class Contact extends Component {
           </div>
         </div>
         <hr></hr>
-        <div className='h3 my-3'>Ask A Question</div>
+        <div className='h3 text-dark my-3'>Ask A Question</div>
         <div className='row' >
           <form className='mx-auto' onSubmit={this.submitHandler}>
             <div className="form-row ">
-              <div className="form-group">
-                  <label htmlFor="subject">Question Subject</label>
+              <div className="form-group text-dark">
+                  <label className="text-dark" htmlFor="subject">Question Subject</label>
                   <input type="text" className="form-control" id="subject" name="subject" onChange={this.changeHandler}  required/>
                 </div>
               </div>
 
-              <div className="form-group">
-                <label htmlFor="description">Description</label>
+              <div className="form-group ">
+                <label className="text-dark" htmlFor="description">Description</label>
                 <textarea onChange={this.changeHandler} name = 'description' value={this.state.description} className="form-control" id="description" rows="2"></textarea>
               </div>
 
-              <button type="submit" className="btn btn-lg btn-warning ">Add Question</button>
+              <button type="submit" className="btn btn-warning ">Add Question</button>
           </form>
         </div>
       </div>

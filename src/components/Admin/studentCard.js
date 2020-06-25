@@ -15,7 +15,7 @@ const studentCard = (props) => {
         <CardBody>
           <CardTitle>No. of Students</CardTitle>
           <CardSubtitle>Registered</CardSubtitle>
-            {(props.students) ? <CardText className='display-3'>{props.students.length}</CardText> : <div className="spinner-border d-block m-3 text-light"></div>}
+            {(props.students) ? <h1 className='h1'>{props.students.length}</h1> : <div className="spinner-border d-block m-3 text-light"></div>}
           <Button  color='dark'><NavLink to='/students-date' className='nav-link text-white p-0'>Students Data</NavLink></Button>
         </CardBody>
       </Card>

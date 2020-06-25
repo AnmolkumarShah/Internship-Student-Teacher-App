@@ -30,17 +30,17 @@ class AddCourse extends Component{
       <form onSubmit={this.submitHandler}>
         <div className="form-row">
           <div className="form-group col-md-8">
-            <label htmlFor="name">Course Name</label>
+            <label htmlFor="name" className='text-dark'>Course Name</label>
             <input type="text" className="form-control" id="name" name="name" onChange={this.changeHandler} required/>
           </div>
         </div>
 
         <div className="form-group">
-          <label htmlfor="description">Description</label>
+          <label htmlfor="description" className='text-dark'>Description</label>
           <textarea onChange={this.changeHandler} name = 'description' value={this.state.description} className="form-control" id="description" rows="2"></textarea>
         </div>
 
-        <button type="submit" className="btn btn-lg btn-warning ">Add Course</button>
+        <button type="submit" className="btn btn-warning ">Add Course</button>
       </form>
       </div>
       </>

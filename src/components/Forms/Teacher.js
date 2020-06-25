@@ -45,7 +45,7 @@ class Teacher extends Component{
 
         <div className="input-group  mb-3">
           <div className="input-group-prepend">
-            <span className="input-group-text bg-warning text-white fa fa-phone fa-lg" id="contact"></span>
+            <span id="contact">Contact No.</span>
           </div>
           <input type="tel"  className="form-control" id="contact" name="contact" onChange={this.changeHandler} required/>
         </div>
@@ -53,7 +53,7 @@ class Teacher extends Component{
 
         <div className="input-group  mb-3">
           <div className="input-group-prepend">
-            <span className="input-group-text bg-warning text-white fa fa-envelope fa-lg " id="email"></span>
+            <span id="email">Email</span>
           </div>
           <input type="email" className="form-control" id="email" name="email" onChange={this.changeHandler} required/>
         </div>
@@ -72,7 +72,7 @@ class Teacher extends Component{
           <p className='text-info'>Seperate Subjects with comma (,)</p>
         </div>
 
-        <button type="submit" className="btn btn-lg btn-warning ">Join</button>
+        <button type="submit" className="btn  btn-warning ">Join</button>
       </form>
       </div>
     )

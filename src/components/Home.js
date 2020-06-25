@@ -4,13 +4,14 @@ import { Card, Button, CardTitle, CardText, Col, Modal, ModalHeader, ModalBody,J
 import TeacherModal from './layout/TeacherModal'
 import StudentModal from './layout/StudentModal'
 
-import Cards from './layout/Cards';
-import {NavLink} from 'react-router-dom'
-import FAQ from '../components/layout/Collapse'
+import FAQ from './layout/faq'
 import Courses from './layout/Courses/Courses'
 import './layout/Head.css'
 import TestimonialTest from './layout/testimonial';
 import Info from './layout/Info'
+import More from './layout/Courses/More';
+import TopCarousel from './Top/TopCarousel'
+import TestimonialTeacher from './layout/testimonialTeacher';
 
 
 
@@ -23,9 +24,9 @@ const Head = (props) => {
   return (
     <>
 
-    <div className="jumbotron jumbotron-fluid z-depth-4" style={{}}>
+    <div className="jumbotron jumbotron-fluid z-depth-4" style={{'height' : "1000px"}}>
       <div className="container">  
-        <div className="main mx-2 p-2 text-center">
+        <div className="main mx-2 mt-4 p-2 text-center">
           <div className='display-2'>Brand Name</div>
           <div  className='h1 lead'>In our platform you will get the latest news of our services as well as the news of the examination that your student will give. We also provide news on various school level competitive exams in our</div>
         </div>
@@ -38,8 +39,7 @@ const Head = (props) => {
         FIND BEST HOME TUTORS NEAR YOU.
         </div>
         <Row>
-            <StudentModal /> 
-            <TeacherModal />             
+                      
         </Row>
       </div>
     </div>
@@ -57,40 +57,14 @@ const JumboOne = () => {
   return (
     <div>
       <Jumbotron fluid style={teacherStyle} className="z-depth-4">
-        <Container>
           <div className='row'>
-            <div className='col-sm-6 text-left' >
-              <h1 style={{"color": "white", "mix-blend-mode": "difference"}} className='text-white'>TUITION BY OUR MOST QUALIFIED HOME TUTOR</h1>
-              <div style={{"color": "white", "mix-blend-mode": "difference"}} className=' h4 lead font-weight-bold d-sm-none d-md-block'>Gurusiksha bridges the gap between the great mentors and students need. provides online as well as offline assistance to the students so they can solving their queries and doubts. strongly believe in providing the best online as well as offline tuitions to the students.</div>
-              <Button className="btn-primary mt-4">Learn More</Button>
+            <div className='col-9 text-left' >
+              <StudentModal /> 
+              <TeacherModal />   
             </div>
-          </div>
-        </Container>
-      </Jumbotron>
-    </div>
-  );
-}
-
-const JumboTwo = () => {
-  const stydentStyle = {
-    'background-image' : "url('https://images.pexels.com/photos/267491/pexels-photo-267491.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')",
-  'background-size' : 'cover',
-  'opacity' : '0.9',
-  'padding' : '5px',
-  }
-  return (
-    <div>
-      <Jumbotron fluid style={stydentStyle} className="z-depth-4">
-        <Container>
-          <div className='row'>
-            <div className='col-sm-6'></div>
-            <div className='col-sm-6 text-right' >
-              <h1 style={{"color": "white", "mix-blend-mode": "difference"}} className='text-white'>BEST ONLINE TUITION CLASSES BY OUR VERTEX TUTORS</h1>
-              <div style={{"color": "white", "mix-blend-mode": "difference"}} className=' h4 lead font-weight-bold'>Within the proximity of your home get the assistance of the best online as well as offline teachers to nourish the preparation of your child. Online live sessions are provided here to clarify the concepts and to provide education in the most interactive manner.</div>
-              <Button className="btn-primary mt-4">Learn More</Button>
+            <div className='col'>
             </div>
-          </div>
-        </Container>
+          </div>        
       </Jumbotron>
     </div>
   );
@@ -113,15 +87,26 @@ class Home extends Component{
     return(
       
       <>
-        <Head />
-        <TestimonialTest/>
+        <TopCarousel/>
+        <div className = 'container display-4 text-center  mb-3 font-weight-bold'>
+        FIND BEST HOME TUTORS NEAR YOU.
+        </div>
         <JumboOne/>
-        <JumboTwo/>
-        <Info />
-        <Courses />
+        <h2 className='text-center display-4 text-muted'>Testimonials</h2>
+        <div className='row'>
+          <div className='mb-4 col-sm-6'><TestimonialTest/></div>
+          <div className='mb-4 col-sm-6'><TestimonialTeacher/></div>
+        </div>        
+        <h2  className='text-center text-muted'><a href="#courses">Courses</a></h2>
+        <p className='text-center color-fade'>Swipe right for more</p>
+        <div className='row'>
+        <div className='mb-4 col-sm-6'><Courses /></div>
+          <div className='mb-4 col-sm-6'><More/></div>
+        </div> 
+        <Info />       
         <div className='display-4 text-center mt-3 text-muted'>FAQ's</div>
         <p className="text-center">Click for more information</p>
-        <FAQ />   
+        <FAQ />  
         <Carousel />
       </>
     )

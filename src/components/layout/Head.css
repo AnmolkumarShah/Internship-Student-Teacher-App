@@ -5,8 +5,8 @@
 }
 
 .jumbotron {
-  height: 90%;
-  background: url("https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center center fixed;
+  height: 100%;
+  background: url("https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -17,10 +17,10 @@
 
 .main {
   position: relative;
-  top: 60%;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.342);
   color: white;
+  bottom: -200px;
 }
 
 .main h1 {

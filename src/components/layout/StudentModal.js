@@ -16,11 +16,15 @@ class StudentModal extends Component{
   render(){
     return (
       <>
-        <div className='col-sm-6 '>
-          <Card body className='mt-3 z-depth-4'>
-            <CardTitle>I'm A Student</CardTitle>
-            <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-            <Button onClick={this.toggleStudentModal} color='primary'>Go somewhere</Button>
+        <div className='col-sm-8 '>
+          <Card body className='mt-3 z-depth-4 rounded text-center'>
+            <CardTitle className="h1">I'm A Student</CardTitle>
+            <blockquote class="blockquote text-center">
+              <p className="mb-0">“Teachers can open the door, but you must enter it yourself.”</p>
+              <footer className="blockquote-footer"><cite title="Source Title">Chinese proverb</cite></footer>
+            </blockquote>
+            
+            <Button onClick={this.toggleStudentModal} color='primary'>Join Now</Button>
           </Card>
         </div>
 

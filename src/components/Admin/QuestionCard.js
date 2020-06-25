@@ -15,7 +15,7 @@ const questionCard = (props) => {
         <CardBody>
           <CardTitle>No. of </CardTitle>
           <CardSubtitle>Question</CardSubtitle>
-            {(props.questions) ? <CardText className='display-3'>{props.questions.length}</CardText> : <div className="spinner-border d-block m-3 text-light"></div>}
+            {(props.questions) ? <h1 className='h1'>{props.questions.length}</h1> : <div className="spinner-border d-block m-3 text-light"></div>}
           <Button  color='dark'><NavLink to='/questions' className='nav-link text-white p-0'>Asked Question Data</NavLink></Button>
         </CardBody>
       </Card>

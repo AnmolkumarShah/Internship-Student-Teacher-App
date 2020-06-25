@@ -52,7 +52,7 @@ class faq extends Component {
     return (
       <div className='ml-3 mt-3 mr-2'>
       <div>
-        <Button color="primary" onClick={this.Onetoggle} style={{ marginBottom: '1rem' }}>How Gurusiksha works for Tutors?</Button>
+        <Button color="primary" onClick={this.Onetoggle} style={{"padding" : "20px" }}>How Gurusiksha works for Tutors?</Button>
         <Collapse isOpen={this.state.one}>
           <Card>
             <CardBody>
@@ -63,7 +63,7 @@ class faq extends Component {
       </div>
 
       <div>
-        <Button color="primary" onClick={this.twotoggle} style={{ marginBottom: '1rem' }}>How Gurusiksha works for students?</Button>
+        <Button color="primary" onClick={this.twotoggle} style={{"padding" : "20px" }}>How Gurusiksha works for students?</Button>
         <Collapse isOpen={this.state.two}>
           <Card>
             <CardBody>
@@ -74,7 +74,7 @@ class faq extends Component {
       </div>
 
       <div>
-        <Button color="primary" onClick={this.threetoggle} style={{ marginBottom: '1rem' }}> Is it important to verify KYC and documents?</Button>
+        <Button color="primary" onClick={this.threetoggle} style={{ "padding" : "20px" }}> Is it important to verify KYC and documents?</Button>
         <Collapse isOpen={this.state.three}>
           <Card>
             <CardBody>
@@ -85,7 +85,7 @@ class faq extends Component {
       </div>
 
       <div>
-        <Button color="primary" onClick={this.fourtoggle} style={{ marginBottom: '1rem' }}>What kind of refund policy Gurusiksha has covered?</Button>
+        <Button color="primary" onClick={this.fourtoggle} style={{ "padding" : "20px"}}>What kind of refund policy Gurusiksha has covered?</Button>
         <Collapse isOpen={this.state.four}>
           <Card>
             <CardBody>
@@ -96,7 +96,7 @@ class faq extends Component {
       </div>
 
       <div>
-        <Button color="primary" onClick={this.fivetoggle} style={{ marginBottom: '1rem' }}>How to take classes through Gurusiksha?</Button>
+        <Button color="primary" onClick={this.fivetoggle} style={{  "padding" : "20px"}}>How to take classes through Gurusiksha?</Button>
         <Collapse isOpen={this.state.five}>
           <Card>
             <CardBody>
@@ -107,7 +107,7 @@ class faq extends Component {
       </div>
 
       <div>
-        <Button color="primary" onClick={this.sixtoggle} style={{ marginBottom: '1rem' }}>Why choose gurusiksha?</Button>
+        <Button color="primary" onClick={this.sixtoggle} style={{  "padding" : "20px"}}>Why choose gurusiksha?</Button>
         <Collapse isOpen={this.state.six}>
           <Card>
             <CardBody>

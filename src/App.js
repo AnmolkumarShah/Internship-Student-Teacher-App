@@ -12,6 +12,13 @@ class App extends Component{
 
     let sidenav = document.querySelector('#slide-out')
     M.Sidenav.init(sidenav, {})
+
+    let faq = document.querySelectorAll('.collapsible');
+     M.Collapsible.init(faq, {});
+
+    let more = document.querySelectorAll('.collapsible');
+     M.Collapsible.init(more, {});
+
   } 
   render(){
     return(

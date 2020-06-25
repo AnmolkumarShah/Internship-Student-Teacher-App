@@ -7,25 +7,46 @@ import {compose} from 'redux'
 import { connect } from 'react-redux';
 import Item from "./item";
 
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "none", background: "red" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "none", background: "green" }}
+      onClick={onClick}
+    />
+  );
+}
+
 class CenterMode  extends Component {
   render() {
     var settings = {
-      dots: true,
+      dots: false,
       infinite: true,
-      speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
       adaptiveHeight: true,
       autoplay: true,
       speed: 1000,
       autoplaySpeed: 5000,
-      cssEase: "linear"
+      cssEase: "linear",
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />
     };
     const courses = this.props.courses;
     return ( 
-      <div className='container'>
-        <h2 className='text-center text-muted'>Courses</h2>
-        <p className='text-center color-fade'>Swipe right for more</p>
+      <div className=''>
         <Slider {...settings}>
           {(courses !== undefined) && courses.map((item,index) => <Item index={index} course={item} key={item.id} /> )}
         </Slider>

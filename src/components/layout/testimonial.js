@@ -3,6 +3,28 @@ import { Card, Button, CardHeader, CardFooter, CardBody,
   CardTitle, CardText } from 'reactstrap';
 import Slider from "react-slick";
 
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "none", background: "red" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "none", background: "green" }}
+      onClick={onClick}
+    />
+  );
+}
+
 export default class CenterMode extends Component {
   render() {
     const settings = {
@@ -16,12 +38,14 @@ export default class CenterMode extends Component {
       speed: 1000,
       autoplaySpeed: 5000,
       cssEase: "linear",
-      fade : true
+      fade : true,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />
     };
     return (
-      <div  className='container mb-4'>
-        <h2 className='text-center display-4 text-muted'>Testimonials</h2>
-        <Slider {...settings} className='container'>
+      <div  className=''>
+      <div className='text-left h3'>Students...</div>
+        <Slider {...settings} >
           <Card style={{'maxWidth' : '50px', "margin" : "0 20px"}} className='bg-warning mx-auto z-depth-2 container'>
             <div className='mx-auto mt-3'><img className="center circle" src='https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50' /></div>
             <CardBody>

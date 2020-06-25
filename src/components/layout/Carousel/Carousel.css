@@ -1,9 +1,8 @@
-.caption{
-  background-color: rgba(238, 228, 228, 0.007);
-  text-align: left;
-  color: wheat;
-  margin-bottom: -200px;
-}
 .carousel-wrapper{
-  margin-bottom: -250px;
+  height: 100%;
+  margin-bottom: -300px;
+}
+
+.images{
+  background-size: cover;
 }

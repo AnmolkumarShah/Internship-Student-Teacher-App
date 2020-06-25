@@ -15,11 +15,14 @@ class TeacherModal extends Component{
   render(){
     return( 
       <>
-        <div className='col-sm-6 '>
-          <Card body className='mt-3 z-depth-4'>
-            <CardTitle>I Want to be an Instructor</CardTitle>
-            <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-            <Button onClick={this.toggleTeacherModal} color='primary'>Go somewhere</Button>
+        <div className='col-sm-8 '>
+          <Card body className='mt-3 z-depth-4 rounded text-center'>
+            <CardTitle className="h1">I Want to be an Instructor</CardTitle>
+            <blockquote class="blockquote text-center">
+              <p className="mb-0">“Teaching is not a lost art, but the regard for it is a lost tradition.’ </p>
+              <footer className="blockquote-footer"><cite title="Source Title">Jacques Barzun</cite></footer>
+            </blockquote>
+            <Button onClick={this.toggleTeacherModal} color='primary'>Join Now</Button>
           </Card>
         </div>
 

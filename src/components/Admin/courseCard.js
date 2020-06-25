@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Card, CardImg, CardText, CardBody,
+  Card, CardImg, CardBody,
   CardTitle, CardSubtitle, Button,Spinner 
 } from 'reactstrap';
 import {firestoreConnect} from 'react-redux-firebase'
@@ -15,7 +15,7 @@ const courseCard = (props) => {
         <CardBody >
           <CardTitle>No. of Courses</CardTitle>
           <CardSubtitle>We Have</CardSubtitle>
-          {(props.courses) ? <CardText className='display-3'>{props.courses.length}</CardText> : <div className="spinner-border d-block m-3 text-light"></div>}
+          {(props.courses) ? <h1 className='h1'>{props.courses.length}</h1> : <div className="spinner-border d-block m-3 text-light"></div>}
           <Button  color='dark'><NavLink to='/courses' className='nav-link text-white p-0'>Course Data</NavLink></Button>
         </CardBody>
       </Card>
